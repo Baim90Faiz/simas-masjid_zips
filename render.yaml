@@ -1,0 +1,16 @@
+# Blueprint Render: allows creating the app from this file.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: simas-masjid
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: NODE_ENV
+        value: production

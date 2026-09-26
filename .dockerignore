@@ -1,0 +1,11 @@
+node_modules
+dist
+data
+.git
+.gitignore
+*.log
+*.db
+*.db-shm
+*.db-wal
+README.md
+PANDUAN-HOSTING.md
